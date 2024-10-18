@@ -1,0 +1,128 @@
+header{
+	background-color: #22d9cf;
+}
+
+.zoom {
+width: 320px;
+height: 160px;
+margin-left: 45%;
+}
+.image {
+width: 100%;
+height: 100%;
+}
+.image img {
+-webkit-transition: all 1s ease; /* Safari et Chrome */
+-moz-transition: all 1s ease; /* Firefox */
+-ms-transition: all 1s ease; /* Internet Explorer 9 */
+-o-transition: all 1s ease; /* Opera */
+transition: all 1s ease;
+}
+.image:hover img {
+-webkit-transform:scale(1.10); /* Safari et Chrome */
+-moz-transform:scale(1.10); /* Firefox */
+-ms-transform:scale(1.10); /* Internet Explorer 9 */
+-o-transform:scale(1.10); /* Opera */
+transform:scale(1.10);
+}
+
+/*Menu de navigation*/
+nav.menu-nav{
+	text-align: center;
+}
+nav.menu-nav ul li.btn{
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+nav.menu-nav ul li.btn{
+list-style-type: none;
+}
+
+nav.menu-nav ul li.btn a{
+	color: grey;
+	background-color: #82f7f1;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 30px;
+}
+
+nav.menu-nav ul li.btn:hover a{
+	color: white;
+	background: grey;
+	transition: 0.3s all;
+}
+
+body{
+	background: url("../img/fond.png") no-repeat ;
+	background-size: 300%;
+	backdrop-filter: blur(2rem);
+	padding-bottom: 8%;
+}
+
+div#p1{
+	background: #22d9cf;
+	text-align: center;
+	max-width: 50%;
+	margin: 0 auto;
+	color: #616465;
+	border-radius: 10px;
+}
+div#p2{
+	background: #22d9cf;
+	text-align: center;
+	max-width: 50%;
+	margin: 0 auto;
+	color: #616465;
+	border-radius: 10px;
+}
+footer{
+	text-align: center;
+	background: #22d9cf;
+	max-width: 50%;
+	margin: 0 auto;
+	color: #616465;
+	border-radius: 10px;
+}
+
+/* Ajout des règles de média requêtes pour les appareils mobiles */
+@media screen and (max-width: 600px) {
+  .zoom {
+    margin-left: 10%; 
+    width: 100%; /* Ajustement de la largeur pour les petits écrans */
+    max-width: none; /* Réinitialisation de la largeur maximale */
+  }
+
+  nav.menu-nav ul li.btn {
+    margin-left: 10px; /* Ajustement de la marge pour les petits écrans */
+  }
+
+  nav.menu-nav ul li.btn a {
+    font-size: 20px; /* Réduction de la taille de police pour les petits écrans */
+  }
+
+  div#p1, div#p2, footer {
+    max-width: 90%; /* Ajustement de la largeur maximale pour les petits écrans */
+    margin-left: auto; /* Réinitialisation de la marge */
+    margin-right: auto; /* Réinitialisation de la marge */
+  }
+}
+
+#map-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    padding-top: 30px; /* Ajoute un espace pour la barre de recherche */
+    height: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
